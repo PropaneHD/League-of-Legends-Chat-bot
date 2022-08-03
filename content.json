@@ -1,0 +1,175 @@
+{
+    "intents": [
+        {
+            "tag": "greetings",
+            "patterns": [
+                "Hi",
+                "Hey",
+                "How is it going?",
+                "Hello",
+                "How are you",
+                "Is anyone there?"
+            ],
+            "responses": [
+                "Greetings Summoner",
+                "Hi, What can I do for you?",
+                "How can I be of help",
+                "Hello Summoner!"
+            ]
+        },
+        {
+            "tag": "runes",
+            "patterns": [
+                "Garen runes",
+                "Anivia build",
+                "evelynn runes",
+                "corki build",
+                "Teemo build",
+                "kayn runes",
+                "ashe runes",
+                "pyke runes"
+            ],
+            "responses": [
+                "GLHF.. Here's the build page.",
+                "Quick here's the runes page",
+                "GLHF.. The runes page"
+            ]
+        },
+        {
+            "tag": "tierlist",
+            "patterns": [
+                "What's the tier list",
+                "current tier list",
+                "tier list",
+                "lol tier list",
+                "champ rankings",
+                "lane tier list"
+            ],
+            "responses": [
+                "Here's the tier list: https://u.gg/lol/tier-list",
+                "Here you go : https://u.gg/lol/tier-list"
+            ]
+        },
+        {
+            "tag": "patchhistory",
+            "patterns": [
+                "Teemo patches",
+                "shaco patch history",
+                "patch history",
+                "alistar patch history",
+                "previous patches of kayn",
+                "previous patches of rammus",
+                "udyr patch history"
+            ],
+            "responses": [
+                "Here's the previous patches for this champion",
+                "The list of changes are here"
+            ]
+        },
+        {
+            "tag": "patchnotes",
+            "patterns": [
+                "What's the current patch notes",
+                "patch notes",
+                "Give me the patch notes",
+                "current patch",
+                "latest version",
+                "recent patch notes"
+            ],
+            "responses": [
+                "Find the patch notes here: https://lol.garena.com/news/articles/4808",
+                "Here you go the latest patch : https://lol.garena.com/news/articles/4808",
+                "The recent patch note is here : https://lol.garena.com/news/articles/4808"
+            ]
+        },
+        {
+            "tag": "bored",
+            "patterns": [
+                "What should I play i'm bored",
+                "feeling bored",
+                "suggest me something im bored",
+                "exciting champs"
+            ],
+            "responses": [
+                "You should try Zeri adc",
+                "How about Ivern, Jk try Gwen top ",
+                "Heard of Mordekaiser? play him in top or jungle",
+                "Bombs away!! Play Ziggs bot"
+            ]
+        },
+        {
+            "tag": "broken",
+            "patterns": [
+                "What's the current broken champ",
+                "Gimme broken champs",
+                "broken champs right now",
+                "op champs"
+            ],
+            "responses": [
+                "For top lane try - Teemo, Darius, Fiora",
+                "In the Jungle - Master Yi, Fiddlesticks, Kayn",
+                "For Mid try - Taliyah, Sylas, Gragas",
+                "Broken ADC champs - Twitch, Sivir, Draven",
+                "broken supports - Senna, Xerath, Blitzcrank"
+            ]
+        },
+        {
+            "tag": "fun",
+            "patterns": [
+                "Fun to play champ",
+                "Funny champ",
+                "easy champ",
+                "blast to play champ"
+            ],
+            "responses": [
+                "Annoy everyone and win late game? Teeemo.",
+                "Hard carry team fights? Wukong",
+                "Late game right click and win AD? Vayne",
+                "A monster jungler? Full AP Volibear"
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "quit",
+                "exit",
+                "see you later",
+                "bb"
+            ],
+            "responses": [
+                "Byee... To restart type Hi" 
+            ]
+        },
+        {
+            "tag": "interesting",
+            "patterns": [
+                "Tell me some interesting fact or lore",
+                "Something I dont know about the lore",
+                "Surprise me",
+                "Cool lore",
+                "Lore",
+                "fact",
+                "Mind blowing lore fact",
+                "Cool fact about the game"
+            ],
+            "responses": [
+                "Corkis chopper is called the Reconnaissance Operations Front-Line Copter (ROFL Copter)",
+                "Warwick was the master of Singed before Soraka turned him into a wolf",
+                "Heimer created Yi's goggles with 7 lenses for him so he could expand his line of sight",
+                "Cassiopeia and Katarina are sisters, Cass is half snake now because she was cursed by magic sword",
+                "Singed was actually the first champion that began development in League of Legends",
+                "Blitzcrank Runs a Dating Service in His Spare Time, As he calls it 'Fleshling Compatibility Services'",
+                "Teemo was created inspired by the smiling grim emoji. And Teemo is an Anagram of emote",
+                "Jinx Dances Like Jake from Adventure Time",
+                "Miss fortune's guns were created by her mother for young Gangplank, who turned the guns on their creator",
+                "Garen & Lux are siblings of the Crownguard family who traditionally serve as the royal protectors",
+                "Many frost Trolls have rallied behind the self proclaimed 'Troll King' Trundle. He named his weapon 'BoneShiver'",
+                "Khada Jhin is a stage name, His true identity still remains a mystery",
+                "With his dying breath Sion killed Jarvan I. The king's crown now serves as Sion's Jaw",
+                "Rumble's mech is named Tristy, Because Tristana was very important to him.",
+                "Jax's favorite food is eggs, particularly the ones from a specfic shop in Shurima"
+            ]
+        }
+    ]
+}
