@@ -177,7 +177,7 @@ def main():
    
     st.subheader('An early prototype.. More to come!')
     
-    st.write("You can ask me things regarding LOL. Like champ runes, patch notes, tierlist and champ's patch history")
+    st.write("You can ask me things regarding LOL. Like champ runes, patch notes, tier list and champ's patch history")
     
     text = st.text_input("Hi, Im LOL Chatbot")
     
