@@ -10,7 +10,7 @@ from tensorflow.keras.layers import Input, Embedding, LSTM, Dense, Flatten
 from tensorflow.keras.models import Model
 
 import streamlit as st
-from streamlit_chat import message as st_message
+import base64
 
 
 champ_names = pickle.load(open("data files/champ_names.pkl",'rb'))
@@ -112,7 +112,7 @@ def responder(pred,input_text):
         else:  
             st.write(bot_name, "OOPS! Give me a valid champ name")
     
-    if response_tag == "patchhistory" and name.capitalize() in champ_names:
+    if response_tag == "patchhistory":
        
         if name.capitalize() in champ_names:                 
             st.write(bot_name, random.choice(responses[response_tag]))
@@ -129,14 +129,56 @@ def responder(pred,input_text):
         st.write(bot_name, random.choice(responses[response_tag]))
         
 
+# Function for setting background image
+@st.cache(allow_output_mutation=True)
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def set_bg_hack(main_bg):
+    '''
+    A function to unpack an image from root folder and set as bg.
+ 
+    Returns
+    -------
+    The background.
+    '''
+    # set bg name
+    main_bg_ext = "png"
+        
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()});
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+    
+# Setting Background image
+set_bg_hack('data files/lolbg.png')
+
+
 def main():
     
     # Title of the Page
     st.title('The League of Legends Chat Bot')
     
-    #Addding Image for reference
+
+    
+    # Adding github url
+    gburl = '[GitHub](https://github.com/PropaneHD/League-of-Legends-Chat-bot)'
+    st.markdown(gburl, unsafe_allow_html=True)
+   
     st.subheader('An early prototype.. More to come!')
-      
+    
+    st.write("You can ask me things regarding LOL. Like champ runes, patch notes, tierlist and champ's patch history")
+    
     text = st.text_input("Hi, Im LOL Chatbot")
     
     if text:
