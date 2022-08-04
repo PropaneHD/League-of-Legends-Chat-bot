@@ -42,7 +42,12 @@ build_url = "https://u.gg/lol/champions/{}/build"
 patchhis_url = "https://leagueoflegends.fandom.com/wiki/{}/LoL/Patch_history"
 
 
+
+
 def name_find(list1, list2):
+    
+    name = ""
+    
     for i in list1: 
         if i not in list1 or i not in list2:
             name = i
@@ -51,9 +56,9 @@ def name_find(list1, list2):
 # Defining Vocabulary 
 
 vocabulary = len(tokenzier.word_index)
-#print("Unique word count:", vocabulary)
+
 output_length = labelEnc.classes_.shape[0]
-#print("Final output classes:", output_length)
+
 
 # Defining the model
 
@@ -102,6 +107,10 @@ def responder(pred,input_text):
     input_text = input_text
     
     name = name_find(input_text.split(), ignore_terms)
+    
+    if name == "":
+        st.write(bot_name, "Give more context")
+        st.write(bot_name, "Enjoy a random lore,", random.choice(responses['interesting']))
     
     if response_tag == "runes":
         
@@ -163,6 +172,15 @@ def set_bg_hack(main_bg):
 # Setting Background image
 set_bg_hack('data files/lolbg.png')
 
+# Hiding the made with streamlit
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+            
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 def main():
     
@@ -185,7 +203,7 @@ def main():
         #st.write("LOL Bot: ")
         with st.spinner('Fetching'):
             res = predictor(text)
-            final = responder(res, text)
+            responder(res, text)
     
 if __name__ == '__main__':
     main()
